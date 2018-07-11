@@ -1,6 +1,14 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
+PORT = process.env.PORT || 5000,
+  express = require('express'),
+  app = express();
+
+app.get('/', (req, res) => res.send('This app is working!!!'));
+
+app.listen(PORT, () => console.log('Example app listening on port 3000!'));
+
 mongoose.Promies = global.Promise;
 mongoose.connect('mongodb://barceolga:Puchatek152023@ds135061.mlab.com:35061/myfirstdatabase', {
       useMongoClient: true
